@@ -1,0 +1,21 @@
+-
+    name: "Bandi DMI"
+	link: "http://web.dmi.unict.it/it/bandi"
+	token: "1234567890abcdefghilmnopqrstuvwxyx:"
+	chat_id: AAAAAAAAAAAAAAAAAA
+	chat_id_dev: 
+		- AAAAAAAAAAAAAAAAAA
+-
+    name: "Consiglio di dipartimento"
+    link: "http://web.dmi.unict.it/content/elenco-sedute-consiglio-di-dipartimento"
+    token: "1234567890abcdefghilmnopqrstuvwxyx:"
+    chat_id: AAAAAAAAAAAAAAAAAA
+    chat_id_dev: 
+        - AAAAAAAAAAAAAAAAAA
+-
+    name: "Commissione paritetica"
+    link: "http://web.dmi.unict.it/elenchi/commissione-paritetica"
+    token: "1234567890abcdefghilmnopqrstuvwxyx:"
+    chat_id: AAAAAAAAAAAAAAAAAA
+    chat_id_dev: 
+        - AAAAAAAAAAAAAAAAAA
