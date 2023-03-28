@@ -1,7 +1,7 @@
 from abc import abstractmethod
 import traceback
 from typing import Union
-from urllib.parse import urljoin
+from urllib.parse import unquote, urljoin
 from bs4 import  NavigableString
 import requests
 from utils.formatting import format_dumb_site_text, format_tag, get_formatted_message
@@ -69,9 +69,9 @@ class Site:
         local_files = []
         for pdf_link in pdf_links:
             response = requests.get(pdf_link, timeout=None)
-            with open('tmp/' + pdf_link.split("/")[-1], 'wb') as f:
+            with open('tmp/' + unquote(pdf_link.split("/")[-1]), 'wb') as f:
                 f.write(response.content)
-            local_files.append('tmp/' + pdf_link.split("/")[-1])
+            local_files.append('tmp/' + unquote(pdf_link.split("/")[-1]))
         return local_files
         
     def send_announcement(self, tr: NavigableString, data: dict) -> None:

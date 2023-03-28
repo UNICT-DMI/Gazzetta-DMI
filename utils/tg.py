@@ -22,6 +22,7 @@ class TelegramBot:
         r = requests.post(URL, params = params, files = files)
         responseJSON = r.json()
         if responseJSON["ok"] == False:
+            self.send_debug_messages("Failed to send message" + "\nError: " + "```\n" + json.dumps(responseJSON, indent=2) + "\n```"); 
             raise ValueError (json.dumps(responseJSON, indent=2))
 
     def send_telegram_message(self, text: str, notification: bool, chat_id: Union[str, int] = None) -> None:
